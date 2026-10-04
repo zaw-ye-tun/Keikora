@@ -1,0 +1,1649 @@
+.source-window {
+  background: #f6f8fc;
+  border: 1px solid #d7e0eb;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px -30px #14283f55;
+  text-align: left;
+}
+.source-topbar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 18px 27px;
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+.source-topbar .logo {
+  font-size: 23px;
+}
+.source-topbar .logo svg {
+  width: 23px;
+}
+.source-workspace {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #52647b;
+}
+.source-user {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+.source-user small {
+  display: block;
+  color: #52647b;
+  font-size: 9px;
+  font-weight: 400;
+}
+.source-nav {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 9px 22px;
+  background: white;
+  border-bottom: 1px solid var(--line);
+  overflow: auto;
+  scrollbar-width: none;
+}
+.source-nav > span {
+  padding: 8px 10px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #52647b;
+  border-radius: 4px;
+}
+.source-nav > span.current {
+  background: #edf3ff;
+  color: #2159b5;
+  font-weight: 550;
+}
+.source-view {
+  padding: 28px;
+  animation: tour-entry 0.2s ease-out;
+  min-height: 440px;
+}
+.source-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.source-heading h4 {
+  font-size: 23px;
+  font-weight: 550;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+.source-heading p {
+  font-size: 11px;
+  color: #52647b;
+  margin-top: 8px;
+  line-height: 1.8;
+}
+.source-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 20px;
+  min-width: 0;
+}
+.source-card h5 {
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+.source-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 19px;
+}
+.source-card-heading > span {
+  font-size: 9px;
+  color: #52647b;
+  white-space: nowrap;
+}
+.source-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf3ff;
+  border: 1px solid #dbe6fb;
+  color: #2a56a4;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 9px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.source-status.pending {
+  background: #fff5e4;
+  border-color: #f3e2c2;
+  color: #865d19;
+}
+.operations-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.source-booking {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  border: 1px solid #e4eaf2;
+  border-radius: 5px;
+  padding: 19px 13px;
+  margin-top: 11px;
+}
+.source-time {
+  font-size: 17px;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  min-width: 50px;
+}
+.source-time small {
+  font-size: 9px;
+  color: #52647b;
+  display: block;
+  letter-spacing: 0;
+  margin-top: 5px;
+}
+.source-booking-detail {
+  flex: 1;
+  min-width: 0;
+}
+.source-booking-detail strong {
+  font-size: 11px;
+  font-weight: 550;
+  display: block;
+}
+.source-booking-detail > span {
+  font-size: 10px;
+  display: block;
+  color: #52647b;
+  margin-top: 4px;
+}
+.source-booking-detail small {
+  font-size: 8px;
+  color: #52647b;
+  display: block;
+  margin-top: 5px;
+}
+.source-employee {
+  font-size: 9px;
+  color: #52647b;
+  max-width: 75px;
+  line-height: 1.6;
+}
+.request-count {
+  border: 1px solid #f0e2c5;
+  background: #fff7e8;
+  border-radius: 4px;
+  padding: 4px 6px;
+  color: #865d19 !important;
+}
+.source-request {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.request-icon {
+  color: #557396;
+  background: #f0f4fb;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+}
+.source-request > div {
+  flex: 1;
+}
+.source-request strong {
+  font-size: 10px;
+  font-weight: 500;
+}
+.source-request p,
+.source-request > div > span {
+  font-size: 8px;
+  color: #52647b;
+  margin-top: 5px;
+  line-height: 1.7;
+  display: block;
+}
+.source-request .source-status {
+  font-size: 7px;
+  padding: 4px 5px;
+}
+.request-category {
+  padding-top: 15px;
+}
+.request-category + .request-category {
+  margin-top: 15px;
+  border-top: 1px solid var(--line);
+}
+.request-category strong {
+  font-size: 10px;
+  font-weight: 550;
+}
+.request-category p {
+  font-size: 9px;
+  color: #52647b;
+  margin-top: 4px;
+  line-height: 1.7;
+}
+.source-upcoming {
+  grid-column: 1/-1;
+}
+.upcoming-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 11px;
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+}
+.upcoming-row > span:nth-child(2) {
+  flex: 1;
+}
+.upcoming-row strong {
+  font-weight: 500;
+}
+.upcoming-row small {
+  display: block;
+  font-size: 9px;
+  color: #52647b;
+  margin-top: 5px;
+}
+.source-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid var(--line);
+  padding: 12px 27px;
+  background: white;
+  font-size: 9px;
+  line-height: 1.8;
+  color: #52647b;
+}
+.source-caption > span:first-child {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.source-caption svg {
+  color: #326e55;
+}
+.source-hero-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #52647b;
+  margin-top: 20px;
+  line-height: 1.7;
+}
+.tour-tabs {
+  display: flex;
+  padding: 5px;
+  background: #edf2f8;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  gap: 4px;
+  width: max-content;
+  margin: 0 auto 30px;
+}
+.tour-tabs button {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 12px 23px;
+  font-size: 12px;
+  min-height: 44px;
+  transition: background 0.2s;
+  color: #52647b;
+}
+.tour-tabs button[aria-selected="true"] {
+  background: #fff;
+  border-color: var(--line);
+  color: var(--navy);
+  box-shadow: 0 2px 4px #14283f09;
+}
+.tour-tabs button:hover {
+  color: var(--blue);
+}
+.tour-explanation {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 70px;
+  margin-bottom: 30px;
+  min-height: 151px;
+  padding-top: 6px;
+}
+.tour-role {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: #52647b;
+  letter-spacing: 0.025em;
+  margin-bottom: 13px;
+}
+.tour-explanation h3 {
+  font-size: 26px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+.tour-explanation p {
+  font-size: 12px;
+  line-height: 1.85;
+  color: #52647b;
+}
+.built-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  line-height: 1.7;
+  color: #326e55;
+  border: 1px solid #d8e7de;
+  background: #f0f7f3;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+.tour-connection {
+  border-left: 1px solid var(--line);
+  padding-left: 27px;
+}
+.tour-connection p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 17px;
+  font-size: 11px;
+}
+.tour-connection p svg {
+  margin-top: 5px;
+  color: #6381a6;
+}
+.sample-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  padding: 8px 11px;
+  color: white;
+  font-size: 10px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.source-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 19px;
+}
+.source-filters > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 9px;
+  color: #52647b;
+}
+.booking-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+}
+.source-assignment-mode {
+  display: flex;
+  gap: 0;
+  font-size: 10px;
+  align-items: center;
+  margin: 21px 0;
+}
+.source-assignment-mode > span:first-child {
+  margin-right: auto;
+  color: #52647b;
+}
+.source-assignment-mode > span:nth-child(2),
+.source-assignment-mode > strong {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  font-weight: 400;
+}
+.source-assignment-mode > strong {
+  background: #edf3ff;
+  color: #2159b5;
+}
+.source-section-title {
+  margin: 21px 0 13px;
+}
+.source-pending-booking {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #e6eaf1;
+  border-radius: 5px;
+  background: #fcfdff;
+}
+.source-pending-booking > div:first-child {
+  flex: 1;
+}
+.source-pending-booking small {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: #52647b;
+  display: block;
+  margin-bottom: 8px;
+}
+.source-pending-booking strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 550;
+}
+.source-pending-booking > div:first-child > span {
+  display: block;
+  font-size: 10px;
+  color: #52647b;
+  margin-top: 7px;
+}
+.source-pending-booking > .source-status {
+  align-self: flex-start;
+}
+.assignment-details {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+.assignment-details > span {
+  font-size: 9px;
+  color: #52647b;
+}
+.assignment-details strong {
+  font-size: 10px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.confirmed-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  line-height: 1.8;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+.confirmed-summary > span:nth-child(2) {
+  flex: 1;
+}
+.confirmed-summary svg {
+  color: #326e55;
+}
+.confirmed-summary small {
+  display: block;
+  font-size: 9px;
+  color: #52647b;
+}
+.source-form-note {
+  font-size: 9px;
+  line-height: 1.8;
+  color: #52647b;
+  margin-top: 5px;
+}
+.sample-form-field {
+  margin-top: 17px;
+}
+.sample-form-field > span {
+  display: block;
+  font-size: 9px;
+  color: #52647b;
+  margin-bottom: 7px;
+}
+.sample-form-field > div {
+  border: 1px solid var(--line);
+  background: #fcfdff;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.sample-field-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+.source-inline-note {
+  color: #52647b;
+  font-size: 9px;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+.source-inline-note .green-dot {
+  margin-right: 5px;
+}
+.calendar-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 24px;
+}
+.calendar-controls > div {
+  display: flex;
+  gap: 15px;
+}
+.calendar-controls > div > span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 9px;
+  color: #52647b;
+}
+.source-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  min-height: 270px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.source-calendar-day {
+  border-right: 1px solid var(--line);
+  padding: 0 11px 15px;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 53px,
+    #eff2f7 54px,
+    #eff2f7 55px
+  );
+}
+.source-calendar-day:last-child {
+  border-right: 0;
+}
+.source-calendar-day > h5 {
+  padding: 15px 0;
+  background: white;
+  font-size: 10px;
+}
+.availability-band,
+.booked-band {
+  padding: 13px 10px;
+  border-left: 3px solid #5c9a80;
+  border-radius: 4px;
+  background: #edf6f0;
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.availability-band small,
+.booked-band small {
+  font-size: 8px;
+  color: #52647b;
+  display: block;
+  margin-bottom: 5px;
+}
+.availability-band strong,
+.booked-band strong {
+  font-size: 10px;
+  display: block;
+  font-weight: 500;
+}
+.availability-band > span,
+.booked-band > span {
+  font-size: 8px;
+  color: #52647b;
+  display: block;
+  margin-top: 4px;
+}
+.booked-band {
+  background: #edf3ff;
+  border-color: #4e80d9;
+  margin-top: 25px;
+}
+.booked-band.unassigned {
+  background: #fff5e4;
+  border-color: #cfa95a;
+}
+.calendar-legend {
+  display: flex;
+  gap: 25px;
+  font-size: 9px;
+  margin-top: 19px;
+  color: #52647b;
+  flex-wrap: wrap;
+}
+.calendar-legend > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.calendar-legend i {
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: #5c9a80;
+}
+.calendar-legend > span:nth-child(2) i {
+  background: #4e80d9;
+}
+.calendar-legend > span:nth-child(3) i {
+  background: #cfa95a;
+}
+.availability-showcase {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+}
+.month-day-labels,
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  gap: 6px;
+}
+.month-day-labels {
+  font-size: 10px;
+  color: #52647b;
+  margin: 20px 0 14px;
+}
+.month-grid > span {
+  height: 46px;
+  border: 1px solid #e9edf3;
+  border-radius: 4px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.month-grid > span.date-selected {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+.month-grid > span.date-available {
+  background: #f0f7f3;
+}
+.month-grid i {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #329977;
+}
+.month-grid .date-selected i {
+  background: white;
+}
+.availability-fields h5 {
+  margin-bottom: 13px;
+}
+.availability-fields > .sample-action {
+  margin-top: 18px;
+  background: white;
+  color: #2159b5;
+  border-color: #d7e0ed;
+}
+.range-sample {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 10px;
+  margin-top: 25px;
+  color: #52647b;
+}
+.source-approval-note {
+  display: flex;
+  gap: 12px;
+  background: #fff8eb;
+  border: 1px solid #f2e4c7;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 23px;
+  color: #805d24;
+}
+.source-approval-note p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.source-approval-note svg {
+  margin-top: 4px;
+}
+.availability-fields > .source-form-note {
+  margin-top: 17px;
+}
+.source-table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+.source-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+}
+.source-table th {
+  font-size: 10px;
+  font-weight: 500;
+  color: #52647b;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  padding: 15px 13px;
+  white-space: nowrap;
+}
+.source-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 23px 13px;
+  line-height: 1.7;
+}
+.source-table td strong {
+  font-weight: 500;
+}
+.source-table td small {
+  display: block;
+  font-size: 9px;
+  color: #52647b;
+  margin-top: 6px;
+}
+.source-table td > span:not(.sample-action) {
+  font-size: 10px;
+  color: #52647b;
+}
+.invoice-example {
+  border: 1px solid var(--line);
+  padding: 24px;
+  border-radius: 5px;
+}
+.invoice-example-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+}
+.invoice-example-grid > div:first-child {
+  text-align: center;
+  border: 1px solid var(--line);
+  padding: 23px;
+  border-radius: 4px;
+  background: #fafcff;
+}
+.invoice-doc-icon {
+  display: flex;
+  justify-content: center;
+  color: #4e6f9d;
+  margin-bottom: 18px;
+}
+.invoice-example-grid strong {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+}
+.invoice-example-grid p {
+  font-size: 11px;
+  color: #52647b;
+  margin-top: 9px;
+}
+.invoice-example-grid .source-inline-note {
+  display: block;
+  font-size: 8px;
+}
+.invoice-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.invoice-actions > div {
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.invoice-actions > div > span {
+  font-size: 11px;
+  color: #2159b5;
+  display: block;
+}
+.invoice-actions small {
+  display: block;
+  font-size: 9px;
+  color: #52647b;
+  margin-top: 7px;
+  line-height: 1.7;
+}
+.workflow-role {
+  display: block;
+  color: #52647b;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  margin-bottom: 10px;
+}
+.workflow-job {
+  flex-wrap: wrap;
+}
+.workflow-job .badge {
+  font-size: 8px;
+}
+.workflow-preview {
+  min-height: 400px;
+}
+.workflow-preview > p {
+  min-height: 65px;
+}
+.connection-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.connection-feature {
+  padding: 27px 0;
+  border-top: 1px solid var(--line);
+}
+.connection-feature-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  color: #6d86a7;
+}
+.connection-feature-top > span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: #52647b;
+}
+.connection-feature h3 {
+  font-size: 19px;
+  letter-spacing: -0.03em;
+  line-height: 1.5;
+}
+.connection-feature > p {
+  font-size: 12px;
+  color: #52647b;
+  line-height: 1.85;
+  margin-top: 13px;
+  min-height: 89px;
+}
+.connection-path {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-top: 23px;
+  margin-top: 23px;
+  border-top: 1px solid var(--line);
+  font-size: 9px;
+  color: #52647b;
+  line-height: 1.5;
+}
+.connection-path > span:last-child {
+  color: #2b61b4;
+}
+.connection-path svg {
+  width: 12px;
+}
+.section-heading .built-label {
+  margin-top: 12px;
+  font-size: 8px;
+}
+.architecture-section {
+  background: #f0f4f9;
+  border-block: 1px solid #e7ecf2;
+}
+.architecture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+.architecture-grid article {
+  padding: 28px 0;
+}
+.architecture-grid article > svg {
+  color: #6883a6;
+  margin-bottom: 22px;
+}
+.architecture-grid article > .eyebrow {
+  display: block;
+  font-size: 8px;
+  margin-bottom: 12px;
+}
+.architecture-grid h3 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.architecture-grid p {
+  font-size: 12px;
+  color: #52647b;
+  line-height: 1.85;
+  margin-top: 14px;
+}
+.architecture-core {
+  background: white;
+  border: 1px solid #d9e3f1;
+  border-radius: 7px;
+  text-align: center;
+  padding: 33px 25px;
+  box-shadow: 0 14px 30px -23px #14283f30;
+}
+.architecture-core > svg {
+  color: var(--blue);
+  margin: 0 auto 17px;
+}
+.architecture-core > strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.architecture-core > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 23px;
+}
+.architecture-core > div > span {
+  font-size: 9px;
+  color: #52647b;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 7px 9px;
+  background: #f8fafd;
+}
+.architecture-notes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 35px;
+}
+.architecture-notes > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: #52647b;
+}
+.architecture-notes svg {
+  color: #6d86a7;
+}
+.engineering-note {
+  max-width: 660px;
+  text-align: center;
+  font-size: 10px;
+  color: #52647b;
+  margin: 26px auto 0;
+  line-height: 1.9;
+}
+@keyframes tour-entry {
+  from {
+    opacity: 0.5;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1100px) {
+  .source-nav > span {
+    font-size: 9px;
+    padding: 7px 8px;
+  }
+  .source-view {
+    padding: 23px;
+  }
+  .source-card {
+    padding: 17px;
+  }
+  .source-booking {
+    gap: 12px;
+    padding: 17px 10px;
+  }
+  .source-employee {
+    display: none;
+  }
+  .source-heading h4 {
+    font-size: 22px;
+  }
+  .source-request {
+    gap: 7px;
+  }
+  .source-request .source-status {
+    display: none;
+  }
+  .connection-features {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 40px;
+  }
+  .connection-feature > p {
+    min-height: 55px;
+    max-width: 400px;
+  }
+  .tour-tabs button {
+    padding-inline: 19px;
+  }
+  .tour-explanation {
+    gap: 40px;
+  }
+  .architecture-grid {
+    gap: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .source-nav {
+    padding-inline: 14px;
+  }
+  .source-topbar {
+    padding: 16px 20px;
+  }
+  .source-view {
+    padding: 20px;
+  }
+  .source-heading h4 {
+    font-size: 20px;
+  }
+  .source-card {
+    padding: 15px;
+  }
+  .operations-grid {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+  .source-booking {
+    gap: 10px;
+    padding: 16px 9px;
+  }
+  .source-time {
+    font-size: 15px;
+    min-width: 42px;
+  }
+  .source-booking-detail strong {
+    font-size: 10px;
+  }
+  .source-booking-detail > span {
+    font-size: 9px;
+  }
+  .source-status {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+  .request-icon {
+    display: none;
+  }
+  .source-card h5 {
+    font-size: 11px;
+  }
+  .source-card-heading {
+    gap: 8px;
+  }
+  .source-card-heading > span {
+    font-size: 8px;
+  }
+  .source-request strong {
+    font-size: 9px;
+  }
+  .source-request p,
+  .source-request > div > span {
+    font-size: 7px;
+  }
+  .request-category strong {
+    font-size: 9px;
+  }
+  .request-category p {
+    font-size: 8px;
+  }
+  .source-caption {
+    font-size: 8px;
+    padding: 11px 20px;
+  }
+  .tour-explanation {
+    gap: 28px;
+    grid-template-columns: 1.4fr 1fr;
+    min-height: 185px;
+  }
+  .tour-explanation h3 {
+    font-size: 23px;
+  }
+  .tour-explanation p {
+    font-size: 11px;
+  }
+  .tour-connection {
+    padding-left: 22px;
+  }
+  .tour-tabs {
+    max-width: 100%;
+    width: 100%;
+  }
+  .tour-tabs button {
+    flex: 1;
+    padding-inline: 10px;
+    font-size: 10px;
+  }
+  .booking-showcase-grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 12px;
+  }
+  .source-filters > span {
+    padding: 6px 7px;
+    font-size: 8px;
+  }
+  .source-pending-booking {
+    padding: 15px;
+  }
+  .assignment-details {
+    gap: 17px;
+  }
+  .confirmed-summary .source-status {
+    display: none;
+  }
+  .sample-form-field > div {
+    font-size: 9px;
+    padding: 9px;
+  }
+  .source-calendar-day {
+    padding-inline: 7px;
+  }
+  .availability-band,
+  .booked-band {
+    padding: 11px 7px;
+  }
+  .availability-band strong,
+  .booked-band strong {
+    font-size: 9px;
+  }
+  .availability-band small,
+  .booked-band small,
+  .availability-band > span,
+  .booked-band > span {
+    font-size: 7px;
+  }
+  .month-grid > span {
+    height: 39px;
+    font-size: 10px;
+  }
+  .availability-showcase {
+    gap: 13px;
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .source-table th {
+    font-size: 9px;
+    padding: 13px 9px;
+  }
+  .source-table td {
+    font-size: 10px;
+    padding: 20px 9px;
+  }
+  .source-table td > span {
+    font-size: 9px;
+  }
+  .source-table td small {
+    font-size: 8px;
+  }
+  .invoice-example {
+    padding: 17px;
+  }
+  .invoice-example-grid {
+    gap: 20px;
+  }
+  .invoice-example-grid > div:first-child {
+    padding: 20px 15px;
+  }
+  .architecture-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .architecture-core {
+    grid-column: 1/-1;
+    grid-row: 2;
+    max-width: 450px;
+    width: 100%;
+    justify-self: center;
+  }
+  .architecture-grid article {
+    padding: 0;
+  }
+  .architecture-notes {
+    gap: 25px;
+  }
+  .architecture-notes > span {
+    font-size: 9px;
+  }
+}
+@media (max-width: 600px) {
+  .source-topbar {
+    padding: 14px;
+    gap: 12px;
+  }
+  .source-topbar .logo {
+    font-size: 20px;
+  }
+  .source-topbar .logo svg {
+    width: 21px;
+  }
+  .source-workspace {
+    display: none;
+  }
+  .source-user {
+    font-size: 8px;
+  }
+  .source-user small {
+    font-size: 7px;
+  }
+  .source-nav {
+    padding: 7px 10px;
+    gap: 3px;
+  }
+  .source-nav > span {
+    font-size: 9px;
+    padding: 8px 9px;
+  }
+  .source-view {
+    padding: 19px 12px;
+    min-height: 0;
+  }
+  .source-heading {
+    margin-bottom: 20px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .source-heading h4 {
+    font-size: 19px;
+  }
+  .source-heading p {
+    font-size: 10px;
+    line-height: 1.8;
+    margin-top: 7px;
+  }
+  .source-heading > .sample-action {
+    font-size: 8px;
+    padding: 7px 8px;
+    white-space: normal;
+    text-align: center;
+    max-width: 95px;
+    flex-shrink: 0;
+  }
+  .operations-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .source-card {
+    padding: 15px;
+  }
+  .source-card h5 {
+    font-size: 11px;
+  }
+  .source-card-heading > span {
+    font-size: 8px;
+  }
+  .source-booking {
+    gap: 10px;
+    padding: 17px 10px;
+  }
+  .source-time {
+    font-size: 16px;
+    min-width: 43px;
+  }
+  .source-time small {
+    font-size: 8px;
+  }
+  .source-booking-detail strong {
+    font-size: 10px;
+  }
+  .source-booking-detail > span {
+    font-size: 9px;
+  }
+  .source-booking-detail small {
+    font-size: 7px;
+  }
+  .source-status {
+    font-size: 8px;
+  }
+  .request-icon {
+    display: flex;
+  }
+  .source-request strong {
+    font-size: 10px;
+  }
+  .source-request p,
+  .source-request > div > span {
+    font-size: 9px;
+  }
+  .source-request .source-status {
+    display: inline-flex;
+    font-size: 7px;
+  }
+  .request-category strong {
+    font-size: 10px;
+  }
+  .request-category p {
+    font-size: 9px;
+  }
+  .source-upcoming {
+    grid-column: auto;
+  }
+  .upcoming-row {
+    font-size: 10px;
+    gap: 13px;
+    flex-wrap: wrap;
+  }
+  .upcoming-row small {
+    font-size: 8px;
+    line-height: 1.8;
+  }
+  .source-caption {
+    padding: 12px 14px;
+    font-size: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  .source-hero-caption {
+    font-size: 8px;
+    gap: 6px;
+    text-align: center;
+  }
+  .source-hero-caption svg {
+    display: none;
+  }
+  .tour-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+  .tour-tabs button {
+    font-size: 10px;
+    min-height: 44px;
+  }
+  .tour-explanation {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: 0;
+  }
+  .tour-role {
+    font-size: 8px;
+  }
+  .tour-explanation h3 {
+    font-size: 25px;
+  }
+  .tour-explanation p {
+    font-size: 11px;
+  }
+  .tour-connection {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 17px;
+  }
+  .tour-connection p {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .built-label {
+    font-size: 8px;
+  }
+  .booking-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .source-filters > span {
+    font-size: 9px;
+    padding: 7px 8px;
+  }
+  .source-pending-booking strong {
+    font-size: 12px;
+  }
+  .source-pending-booking > div:first-child > span {
+    font-size: 10px;
+  }
+  .assignment-details {
+    gap: 25px;
+  }
+  .assignment-details strong {
+    font-size: 10px;
+  }
+  .confirmed-summary {
+    font-size: 10px;
+  }
+  .confirmed-summary small {
+    font-size: 8px;
+  }
+  .sample-form-field > span {
+    font-size: 10px;
+  }
+  .sample-form-field > div {
+    font-size: 11px;
+    padding: 11px;
+  }
+  .source-form-note,
+  .source-inline-note {
+    font-size: 9px;
+  }
+  .calendar-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 10px;
+  }
+  .calendar-controls > div > span {
+    font-size: 9px;
+  }
+  .source-calendar-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: 0;
+    min-height: 0;
+  }
+  .source-calendar-day {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 0 0 15px;
+    background: none;
+    margin-top: 15px;
+  }
+  .source-calendar-day > h5 {
+    grid-column: 1/-1;
+    padding: 0;
+    font-size: 11px;
+  }
+  .availability-band,
+  .booked-band {
+    margin: 0;
+    padding: 12px 8px;
+  }
+  .availability-band strong,
+  .booked-band strong {
+    font-size: 9px;
+  }
+  .availability-band small,
+  .booked-band small,
+  .availability-band > span,
+  .booked-band > span {
+    font-size: 8px;
+  }
+  .calendar-legend {
+    gap: 12px;
+    font-size: 8px;
+  }
+  .availability-showcase {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .month-grid {
+    gap: 4px;
+  }
+  .month-grid > span {
+    height: 38px;
+    font-size: 10px;
+  }
+  .month-day-labels {
+    font-size: 9px;
+  }
+  .source-approval-note p {
+    font-size: 11px;
+  }
+  .range-sample {
+    font-size: 11px;
+  }
+  .source-table {
+    font-size: 9px;
+  }
+  .source-table th {
+    font-size: 8px;
+    padding: 11px 5px;
+    white-space: normal;
+  }
+  .source-table td {
+    font-size: 9px;
+    padding: 17px 5px;
+    line-height: 1.7;
+  }
+  .source-table td > span {
+    font-size: 8px;
+  }
+  .source-table td small {
+    font-size: 7px;
+  }
+  .source-table th:nth-child(2),
+  .source-table td:nth-child(2) {
+    display: none;
+  }
+  .invoice-example {
+    padding: 15px;
+  }
+  .invoice-example > .source-card-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  .invoice-example-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .invoice-example-grid > div:first-child {
+    padding: 24px;
+  }
+  .invoice-example-grid p {
+    font-size: 11px;
+  }
+  .invoice-actions {
+    gap: 10px;
+  }
+  .invoice-actions > div {
+    padding: 14px;
+  }
+  .invoice-actions > div > span {
+    font-size: 11px;
+  }
+  .invoice-actions small {
+    font-size: 10px;
+  }
+  .connection-features {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .connection-feature {
+    padding: 23px 0;
+  }
+  .connection-feature-top {
+    margin-bottom: 17px;
+  }
+  .connection-feature h3 {
+    font-size: 20px;
+  }
+  .connection-feature > p {
+    font-size: 11px;
+    min-height: 0;
+  }
+  .connection-path {
+    font-size: 10px;
+    margin-top: 19px;
+    padding-top: 17px;
+    gap: 17px;
+  }
+  .architecture-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .architecture-core {
+    grid-row: 2;
+    grid-column: auto;
+    padding: 28px 20px;
+  }
+  .architecture-grid h3 {
+    font-size: 22px;
+  }
+  .architecture-grid p {
+    font-size: 11px;
+  }
+  .architecture-grid article > svg {
+    margin-bottom: 16px;
+  }
+  .architecture-notes {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .architecture-notes > span {
+    font-size: 10px;
+  }
+  .engineering-note {
+    font-size: 9px;
+  }
+  .workflow-job > div {
+    min-width: 120px;
+  }
+  .workflow-preview > p {
+    min-height: 0;
+  }
+  .workflow-preview {
+    min-height: 390px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .source-view {
+    animation: none;
+  }
+}
+
+.invoice-list {
+  margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+  .source-nav > span {
+    display: none;
+  }
+  .source-nav > span:first-child,
+  .source-nav > span.current {
+    display: inline-block;
+  }
+  .source-invoice-table th:nth-child(2),
+  .source-invoice-table td:nth-child(2) {
+    display: table-cell;
+  }
+  .source-invoice-table th:nth-child(1),
+  .source-invoice-table td:nth-child(1),
+  .source-invoice-table th:nth-child(3),
+  .source-invoice-table td:nth-child(3) {
+    display: none;
+  }
+}

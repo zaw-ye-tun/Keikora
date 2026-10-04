@@ -1,0 +1,233 @@
+.workflow-scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: #2159b5;
+  font-size: 11px;
+}
+.workflow-track {
+  --workflow-step-distance: 100px;
+  --workflow-stage-inset: 110px;
+  height: calc(
+    100svh - var(--workflow-stage-inset) + var(--workflow-count) *
+      var(--workflow-step-distance)
+  );
+  --workflow-progress: 0;
+}
+.workflow-sticky {
+  position: sticky;
+  top: 90px;
+  height: calc(100svh - var(--workflow-stage-inset));
+  align-content: center;
+}
+.scroll-workflow .workflow-step > .workflow-step-label {
+  display: block;
+  width: auto;
+  height: auto;
+  flex: 1;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+.scroll-workflow .workflow-step.complete > span:first-child {
+  color: #226857;
+  background: #e9f4ee;
+  border-color: #adcfc5;
+}
+.scroll-workflow .workflow-step.selected {
+  color: var(--navy);
+  transform: translateX(5px);
+}
+.scroll-workflow .workflow-step {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+.workflow-track .workflow-rail-progress {
+  stroke-dashoffset: calc(100 - var(--workflow-progress) * 100);
+  transition: none;
+}
+.scroll-workflow .workflow-preview {
+  min-height: 450px;
+}
+.scroll-workflow .workflow-job {
+  min-height: 80px;
+}
+.workflow-scene {
+  animation: workflow-scene-in 0.4s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+}
+.workflow-scene > p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  min-height: 76px;
+  max-width: 420px;
+  margin-top: 9px;
+}
+@keyframes workflow-scene-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.workflow-scroll-meter {
+  height: 2px;
+  margin-top: 9px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e4ebf3;
+}
+.workflow-scroll-meter > span {
+  display: block;
+  height: 100%;
+  background: #138b9d;
+  transform: scaleX(var(--workflow-progress));
+  transform-origin: left;
+}
+.workflow-linear {
+  display: none;
+}
+.workflow-chapter {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: white;
+}
+.workflow-chapter-number {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #b6d3de;
+  color: #2159b5;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.workflow-chapter h3 {
+  font-size: 22px;
+}
+.workflow-chapter p {
+  margin: 12px 0 17px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+@media (max-width: 800px) {
+  .workflow-sticky {
+    gap: 25px;
+  }
+  .workflow-scene > p {
+    font-size: 11px;
+    min-height: 89px;
+  }
+}
+@media (max-width: 600px) {
+  .workflow-track {
+    --workflow-stage-inset: 96px;
+  }
+  .workflow-sticky {
+    top: 80px;
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+  .scroll-workflow .workflow-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .scroll-workflow .workflow-steps::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    bottom: auto;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: #bad4de;
+  }
+  .scroll-workflow .workflow-rail,
+  .scroll-workflow .workflow-step > .workflow-step-label,
+  .scroll-workflow .workflow-step > svg {
+    display: none;
+  }
+  .scroll-workflow .workflow-step {
+    min-height: 44px;
+    padding: 0;
+    justify-content: center;
+    transform: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .scroll-workflow .workflow-step > span:first-child {
+    width: 31px;
+    height: 31px;
+  }
+  .scroll-workflow .workflow-preview {
+    min-height: 0;
+    padding: 22px;
+  }
+  .scroll-workflow .preview-top {
+    margin-bottom: 18px;
+  }
+  .scroll-workflow .workflow-symbol {
+    width: 56px;
+    height: 44px;
+    margin-bottom: 13px;
+  }
+  .scroll-workflow .workflow-symbol > .workflow-mark {
+    width: 47px;
+    height: 37px;
+  }
+  .scroll-workflow .workflow-preview h3 {
+    font-size: 23px;
+    min-height: 56px;
+  }
+  .workflow-scene > p {
+    min-height: 80px;
+  }
+  .scroll-workflow .workflow-job {
+    margin-top: 19px;
+  }
+  .scroll-workflow .progress-dots {
+    margin-top: 18px;
+  }
+}
+@media (max-height: 650px) {
+  .workflow-track {
+    display: none;
+  }
+  .workflow-linear {
+    display: grid;
+    gap: 18px;
+  }
+  .workflow-scroll-hint {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .workflow-scene {
+    animation: none;
+  }
+  .scroll-workflow .workflow-step {
+    transition: none;
+  }
+  .scroll-workflow .workflow-step.selected {
+    transform: none;
+  }
+}

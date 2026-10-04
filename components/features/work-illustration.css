@@ -1,0 +1,176 @@
+.work-illustration-reveal {
+  min-width: 0;
+}
+.work-illustration {
+  margin: 0;
+  view-timeline-name: --connected-work;
+  view-timeline-axis: block;
+}
+.work-illustration-scene {
+  position: relative;
+  aspect-ratio: 1.12;
+  isolation: isolate;
+}
+.work-illustration-glow {
+  position: absolute;
+  inset: 15% 5% 8%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    #e7f2ff 5%,
+    #ecfaf6 45%,
+    transparent 72%
+  );
+}
+.work-illustration-image {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.work-illustration-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #dfe8f2;
+  border-radius: 10px;
+  background: #ffffffed;
+  box-shadow: 0 10px 35px #183c6010;
+  color: #173452;
+}
+.work-illustration-card > span:not(.work-illustration-icon) {
+  display: grid;
+  gap: 5px;
+}
+.work-illustration-card small {
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  color: #536c85;
+}
+.work-illustration-card strong {
+  font-size: 10px;
+  font-weight: 500;
+}
+.work-illustration-card > svg {
+  color: #15816a;
+}
+.work-illustration-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  background: #edf4ff;
+  color: #2563eb;
+}
+.work-illustration-booking {
+  top: 6%;
+  left: 0;
+}
+.work-illustration-time {
+  top: 25%;
+  right: 0;
+}
+.work-illustration-employee {
+  bottom: 3%;
+  left: 12%;
+}
+.work-illustration-employee .work-illustration-icon {
+  color: #16816b;
+  background: #e9f8f2;
+}
+.work-illustration-dot {
+  width: 6px;
+  height: 6px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: #229e7c;
+}
+.work-illustration figcaption {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 11px;
+  color: #536c85;
+}
+/* The reader's scrolling controls every movement; there is no autoplay loop. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .work-illustration-image,
+    .work-illustration-card {
+      animation-duration: auto;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --connected-work;
+      animation-range: cover 0% cover 100%;
+    }
+    .work-illustration-image {
+      animation-name: work-picture-drift;
+    }
+    .work-illustration-booking {
+      animation-name: work-booking-drift;
+    }
+    .work-illustration-time {
+      animation-name: work-time-drift;
+    }
+    .work-illustration-employee {
+      animation-name: work-employee-drift;
+    }
+  }
+}
+@keyframes work-picture-drift {
+  from {
+    transform: translateY(12px) rotate(-1deg);
+  }
+  to {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+@keyframes work-booking-drift {
+  from {
+    transform: translate(6px, 14px);
+  }
+  to {
+    transform: translate(0, -6px);
+  }
+}
+@keyframes work-time-drift {
+  from {
+    transform: translate(-6px, 18px);
+  }
+  to {
+    transform: translate(0, -8px);
+  }
+}
+@keyframes work-employee-drift {
+  from {
+    transform: translate(6px, 8px);
+  }
+  to {
+    transform: translate(-6px, -12px);
+  }
+}
+@media (max-width: 600px) {
+  .work-illustration-card {
+    padding: 9px 10px;
+    gap: 7px;
+  }
+  .work-illustration-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .work-illustration-card strong {
+    font-size: 9px;
+  }
+  .work-illustration-card small {
+    font-size: 7px;
+  }
+  .work-illustration-employee {
+    left: 8%;
+  }
+}
