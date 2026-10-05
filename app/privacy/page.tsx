@@ -23,11 +23,11 @@ export default function Privacy() {
         This website presents Keikora, an operations software project in
         development in Oulu, Finland.
       </p>
-      <h2>Early-access form</h2>
+      <h2>Contact email</h2>
       <p>
         {siteConfig.contactEmail
-          ? "The form prepares an email in your own email app. Nothing is submitted by the website. Sending that email shares the details you entered with us so we can respond about Keikora."
-          : "Early-access registration is not open yet. The form does not send or store your information. Its fields remain in your browser until you leave or reload the page."}
+          ? "The contact link prepares an email in your own email app. Nothing is submitted by the website. Sending that email shares only the details you choose to include so we can respond about Keikora."
+          : "A monitored contact channel is not published yet. This website does not send or store contact requests."}
       </p>
       <h2>Cookies and analytics</h2>
       <p>
@@ -44,7 +44,7 @@ export default function Privacy() {
       <p>
         {siteConfig.contactEmail
           ? `For questions about information you have shared, contact ${siteConfig.contactEmail}.`
-          : "A monitored contact channel will be published before early-access requests open."}{" "}
+          : "A monitored contact channel will be published before outreach opens."}{" "}
         This information will be updated before new collection methods are
         introduced.
       </p>

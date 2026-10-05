@@ -197,11 +197,11 @@ The homepage currently contains, in order:
 7. For businesses: current roles/workflows and broader industry direction.
 8. Our story: PuhdasFix origin and the implemented operational foundation.
 9. Disconnected/connected workflow comparison.
-10. Product philosophy, development roadmap, early-access form and footer.
+10. Product philosophy, development roadmap, contact section and footer.
 
 Current hero headline: **“Bookings meet availability. Work gets coordinated.”**
 Navigation anchors: `#product`, `#workflow`, `#businesses`, `#story`, `#roadmap`.
-Early-access anchor: `#early-access`. There is also `/privacy/`.
+Contact anchor: `#contact`. There is also `/privacy/`.
 
 The hero no longer renders the large source-derived dashboard preview. It keeps
 the headline, actions, note and compact orchestration cue. The detailed
@@ -350,17 +350,17 @@ during this work. `siteUrl` is configured as `https://keikora.fi`; DNS and
 Cloudflare Pages custom-domain connection still need to be completed outside
 this repository.
 
-## 10. Contact, form, privacy and SEO
+## 10. Contact, privacy and SEO
 
 `lib/site-config.ts` centralizes name, URL, description, location, contact and
 social links. Current location is Oulu, Finland. `siteUrl` is
 `https://keikora.fi`, `contactEmail` is `info@keikora.fi`, and `socialLinks` is
 empty. Do not invent social accounts.
 
-The early-access form validates fields and opens a `mailto:` draft to
-`info@keikora.fi`. The visitor must send it from their email application.
-Opening a draft is not delivery, and the website itself still does not store
-submissions. Verify the mailbox and device flow before accepting registrations.
+The contact section shows a direct `mailto:` link to `info@keikora.fi`. The
+visitor must send the message from their email application. Opening a draft is
+not delivery, and the website itself does not store submissions. The copy avoids
+promising demo access or account provisioning.
 
 Metadata/canonical/OpenGraph/Twitter/Organization and WebSite JSON-LD are in
 `app/layout.tsx`. Robots, sitemap and manifest have their own app files.
@@ -439,7 +439,7 @@ After the second content/motion review, the following passed:
 
 The checks cover four layouts (375, 768, 1024 and 1440px), automated axe
 accessibility, no horizontal overflow or browser errors, six demo views and
-keyboard navigation, mobile menu, honest form behavior, privacy/SEO assets,
+keyboard navigation, mobile menu, honest contact behavior, privacy/SEO assets,
 byte-identical supplied branding, forward/reverse workflow scrolling without
 clicks, reduced motion, short-screen fallback and the new picture's scroll motion.
 Desktop and mobile illustration screenshots were visually reviewed.
@@ -807,7 +807,7 @@ Roadmap
 
 Right side:
 
-"Join early access"
+"Contact Keikora"
 
 Optional secondary:
 "View demo"
@@ -841,7 +841,7 @@ Primary CTA:
 
 Secondary CTA:
 
-"Join early access"
+"Contact Keikora"
 
 Below/alongside the hero, create a sophisticated PRODUCT UI MOCKUP.
 
@@ -1259,7 +1259,7 @@ Type of service business
 
 Button:
 
-"Join early access"
+"Contact Keikora"
 
 Initially no backend is required.
 
@@ -1283,7 +1283,7 @@ Spend more time doing it."
 
 CTA:
 
-Join early access
+Contact Keikora
 
 Secondary:
 
@@ -2499,7 +2499,7 @@ Prefer CTA language such as:
 Explore the product
 See how it works
 Follow development
-Join early access
+Contact Keikora
 Talk to us
 
 Avoid:
@@ -3753,10 +3753,10 @@ project workflow supports it.
 Do not claim 95+ unless measured.
 
 ========================================================
-EARLY ACCESS / CONTACT
+CONTACT
 ========================================================
 
-The current early-access form does not actually submit/store registrations.
+The current contact section does not actually submit/store messages.
 
 Keep this completely honest.
 

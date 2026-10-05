@@ -69,17 +69,17 @@ The social image PNG can be regenerated from the SVG with `node scripts/create-s
 
 Production branding uses the exact supplied `public/brand/keikora_logo.png` and `keikora_text.png`, including the original wordmark and tagline. The artwork is displayed at its original aspect ratio with no cropping, recoloring, tracing or image optimization. Run `node scripts/create-brand-assets.mjs` to copy the original symbol bytes to the favicon and embed the original PNGs in the social-card SVG, then run the social PNG command above. See `docs/brand-system.md` for placement and motion guidance.
 
-## Early access contact
+## Contact section
 
-`contactEmail` is set to `info@keikora.fi`. The form validates fields, then opens a `mailto:` draft including the entered details. The visitor must send it in their email application; opening a draft is not a confirmed submission. No browser storage is used. Verify this flow on your own device before launch. A future form endpoint belongs in `components/early-access/early-access.tsx`; only report success after a verified successful response. Do not put API secrets in client code.
+`contactEmail` is set to `info@keikora.fi`. The contact section shows a direct `mailto:` link instead of a registration form, so the page does not imply demo access or account provisioning. The visitor must send the message in their email application; opening a draft is not a confirmed submission. No browser storage is used. Verify this flow on your own device before launch. A future form endpoint belongs in `components/early-access/early-access.tsx`; only report success after a verified successful response. Do not put API secrets in client code.
 
 ## Structure and implementation
 
 - `app/`: page composition, layout, CSS, privacy, robots, sitemap and manifest.
-- `components/`: navigation, hero, demo, workflow, modules, story, roadmap, form, footer and shared UI.
+- `components/`: navigation, hero, demo, workflow, modules, story, roadmap, contact section, footer and shared UI.
 - `lib/`: central configuration and editable product data.
 - `public/brand/`: source and rendered social preview.
-- `tests/`: browser checks for the actual interaction, form behavior, overflow and accessibility.
+- `tests/`: browser checks for the actual interaction, contact behavior, overflow and accessibility.
 
 Next.js App Router, strict TypeScript, Tailwind CSS v4, Geist via `next/font` and Lucide. Most sections are server-rendered; client components are limited to navigation, lightweight entrance motion and interactive examples. Product previews are HTML/CSS rather than raster screenshots; branding uses the supplied PNGs. CSS animation and a small IntersectionObserver replace a general animation runtime; reduced-motion preferences are respected. Demo tabs support arrow keys, Home and End. The mobile navigation supports Escape, visible focus, native links and an expanded-state announcement.
 
@@ -94,7 +94,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Tests run against a production export served by a small local test server. Screenshots at 375, 768, 1024 and 1440 pixels are written to ignored `test-results/`. Tests include axe checks, overflow checks, demo tabs, workflow selection, mobile menu, form validation and the honest no-send state. These checks do not establish full WCAG conformance or guarantee Lighthouse targets. Run Lighthouse on the deployed URL before launch; network, hosting and device conditions affect scores.
+Tests run against a production export served by a small local test server. Screenshots at 375, 768, 1024 and 1440 pixels are written to ignored `test-results/`. Tests include axe checks, overflow checks, demo tabs, workflow selection, mobile menu, contact-link behavior and the honest no-submit state. These checks do not establish full WCAG conformance or guarantee Lighthouse targets. Run Lighthouse on the deployed URL before launch; network, hosting and device conditions affect scores.
 
 The test server applies compression and immutable asset caching to approximate production hosting. For an installed browser, set `PLAYWRIGHT_CHANNEL=msedge` or `chrome`; otherwise the tests use Playwright Chromium. Tests cover all six source-derived views on desktop/mobile and the requested 375, 768, 1024 and 1440px layouts. Run the checks again after changing source-derived representations.
 

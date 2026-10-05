@@ -22,8 +22,8 @@ export function Hero() {
           <a className="button" href="#product">
             Explore the product <ArrowRight size={17} />
           </a>
-          <a className="text-link" href="#early-access">
-            Join early access <ArrowUpRight size={17} />
+          <a className="text-link" href="#contact">
+            Contact Keikora <ArrowUpRight size={17} />
           </a>
         </div>
         <div className="hero-note">

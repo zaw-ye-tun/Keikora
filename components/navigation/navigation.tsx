@@ -63,8 +63,8 @@ export function Navigation() {
             </a>
           ))}
         </div>
-        <a className="button button-small nav-cta" href="#early-access">
-          Join early access <ArrowUpRight size={15} />
+        <a className="button button-small nav-cta" href="#contact">
+          Contact Keikora <ArrowUpRight size={15} />
         </a>
         <button
           ref={toggle}
@@ -93,8 +93,8 @@ export function Navigation() {
               {name}
             </a>
           ))}
-          <a href="#early-access" onClick={() => setOpen(false)}>
-            Join early access ↗
+          <a href="#contact" onClick={() => setOpen(false)}>
+            Contact Keikora ↗
           </a>
         </div>
       )}

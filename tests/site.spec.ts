@@ -220,7 +220,7 @@ for (const width of [375, 768, 1024, 1440]) {
       const id = href.split("#")[1];
       if (id) await expect(page.locator(`[id="${id}"]`)).toHaveCount(1);
     }
-    await page.locator("#early-access").scrollIntoViewIfNeeded();
+    await page.locator("#contact").scrollIntoViewIfNeeded();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -305,7 +305,7 @@ test("demo views, keyboard navigation and workflow actually change", async ({
     }
   }
 });
-test("mobile navigation and validated form opens a monitored email draft", async ({
+test("mobile navigation and contact link open a monitored email draft", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 812 });
@@ -319,26 +319,12 @@ test("mobile navigation and validated form opens a monitored email draft", async
   await expect(
     page.getByRole("button", { name: "Open navigation" }),
   ).toBeFocused();
-  const form = page.locator("form");
-  await form.getByRole("button").click();
-  expect(
-    await form.evaluate((el) => (el as HTMLFormElement).checkValidity()),
-  ).toBe(false);
-  await page.getByLabel("Name", { exact: true }).fill("Test Owner");
-  await page.getByLabel("Business name").fill("Example Services");
-  await page.getByLabel("Email", { exact: true }).fill("invalid");
-  expect(
-    await form.evaluate((el) => (el as HTMLFormElement).checkValidity()),
-  ).toBe(false);
-  await page.getByLabel("Email", { exact: true }).fill("owner@example.com");
-  await page
-    .getByLabel("Type of service business")
-    .selectOption("Installation");
-  await form.getByRole("button").click();
-  await expect(page.getByRole("status")).toContainText(
-    "Your email app has been requested",
-  );
-  await expect(page.getByText("This opens your email app")).toBeVisible();
+  await expect(page.locator("form")).toHaveCount(0);
+  await expect(page.locator("#contact")).toContainText("Talk with Keikora.");
+  await expect(
+    page.getByRole("link", { name: /info@keikora\.fi/ }),
+  ).toHaveAttribute("href", /mailto:info@keikora\.fi/);
+  await expect(page.getByText("No demo account is promised")).toBeVisible();
 });
 test("privacy and exported SEO assets are available", async ({
   page,

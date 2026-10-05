@@ -13,8 +13,8 @@ export function Footer() {
           <span>Help shape what comes next.</span>
         </h2>
         <div>
-          <a className="button" href="#early-access">
-            Join early access <ArrowUpRight size={17} />
+          <a className="button" href="#contact">
+            Contact Keikora <ArrowUpRight size={17} />
           </a>
           <a className="text-link" href="#product">
             Explore Keikora <ArrowRight size={16} />
@@ -44,7 +44,7 @@ export function Footer() {
               ["For businesses", "/#businesses"],
               ["Our story", "/#story"],
               ["Development", "/#roadmap"],
-              ["Contact", "/#early-access"],
+              ["Contact", "/#contact"],
               ["Privacy", "/privacy/"],
             ].map(([name, href]) => (
               <a href={href} key={name}>
