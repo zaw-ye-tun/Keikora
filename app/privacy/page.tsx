@@ -23,10 +23,10 @@ export default function Privacy() {
         This website presents Keikora, an operations software project in
         development in Oulu, Finland.
       </p>
-      <h2>Contact email</h2>
+      <h2>Contact form</h2>
       <p>
         {siteConfig.contactEmail
-          ? "The contact link prepares an email in your own email app. Nothing is submitted by the website. Sending that email shares only the details you choose to include so we can respond about Keikora."
+          ? "The contact form sends the details you enter through FormSubmit to our monitored email address. We use that information only to respond about Keikora. No demo account is created by submitting the form."
           : "A monitored contact channel is not published yet. This website does not send or store contact requests."}
       </p>
       <h2>Cookies and analytics</h2>

@@ -305,10 +305,23 @@ test("demo views, keyboard navigation and workflow actually change", async ({
     }
   }
 });
-test("mobile navigation and contact link open a monitored email draft", async ({
+test("mobile navigation and contact form submit without a local email app", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 812 });
+  await page.route("https://formsubmit.co/ajax/info@keikora.fi", async (route) => {
+    const request = route.request();
+    expect(request.method()).toBe("POST");
+    const body = request.postDataJSON() as Record<string, string>;
+    expect(body.email).toBe("owner@example.com");
+    expect(body.business).toBe("Example Services");
+    expect(body.message).toContain("booking");
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({ success: true }),
+    });
+  });
   await page.goto("/");
   await page.getByRole("button", { name: "Open navigation" }).click();
   await expect(page.locator("#mobile-navigation")).toBeVisible();
@@ -319,12 +332,30 @@ test("mobile navigation and contact link open a monitored email draft", async ({
   await expect(
     page.getByRole("button", { name: "Open navigation" }),
   ).toBeFocused();
-  await expect(page.locator("form")).toHaveCount(0);
   await expect(page.locator("#contact")).toContainText("Talk with Keikora.");
-  await expect(
-    page.getByRole("link", { name: /info@keikora\.fi/ }),
-  ).toHaveAttribute("href", /mailto:info@keikora\.fi/);
   await expect(page.getByText("No demo account is promised")).toBeVisible();
+  const form = page.locator("form.contact-form");
+  await form.getByRole("button", { name: /Send message/ }).click();
+  expect(
+    await form.evaluate((el) => (el as HTMLFormElement).checkValidity()),
+  ).toBe(false);
+  await page.getByLabel("Name", { exact: true }).fill("Test Owner");
+  await page.getByLabel("Business name").fill("Example Services");
+  await page.getByLabel("Email", { exact: true }).fill("invalid");
+  expect(
+    await form.evaluate((el) => (el as HTMLFormElement).checkValidity()),
+  ).toBe(false);
+  await page.getByLabel("Email", { exact: true }).fill("owner@example.com");
+  await page
+    .getByLabel("Type of service business")
+    .selectOption("Installation");
+  await page
+    .getByLabel("Message")
+    .fill("We need help coordinating booking and employee availability.");
+  await form.getByRole("button", { name: /Send message/ }).click();
+  await expect(page.getByRole("status")).toContainText(
+    "Your message was sent to Keikora",
+  );
 });
 test("privacy and exported SEO assets are available", async ({
   page,

@@ -357,10 +357,11 @@ social links. Current location is Oulu, Finland. `siteUrl` is
 `https://keikora.fi`, `contactEmail` is `info@keikora.fi`, and `socialLinks` is
 empty. Do not invent social accounts.
 
-The contact section shows a direct `mailto:` link to `info@keikora.fi`. The
-visitor must send the message from their email application. Opening a draft is
-not delivery, and the website itself does not store submissions. The copy avoids
-promising demo access or account provisioning.
+The contact section submits through FormSubmit's AJAX endpoint to
+`info@keikora.fi`, so visitors do not need a local email app. The first live
+submission may send a FormSubmit confirmation email to `info@keikora.fi`; click
+that confirmation to activate delivery. The copy avoids promising demo access or
+account provisioning.
 
 Metadata/canonical/OpenGraph/Twitter/Organization and WebSite JSON-LD are in
 `app/layout.tsx`. Robots, sitemap and manifest have their own app files.
@@ -3756,7 +3757,8 @@ Do not claim 95+ unless measured.
 CONTACT
 ========================================================
 
-The current contact section does not actually submit/store messages.
+The current contact section posts to FormSubmit, which emails the monitored
+address. It does not create a demo account.
 
 Keep this completely honest.
 
