@@ -71,7 +71,7 @@ Production branding uses the exact supplied `public/brand/keikora_logo.png` and 
 
 ## Contact section
 
-`contactEmail` is set to `info@keikora.fi`. The contact section submits through FormSubmit's AJAX endpoint, so visitors do not need a local email app. The first live submission may send a FormSubmit confirmation email to `info@keikora.fi`; click that confirmation to activate delivery. No demo account is created by submitting the form. Do not put API secrets in client code.
+`contactEmail` is set to `info@keikora.fi`. The contact section submits through FormSubmit's AJAX endpoint, so visitors do not need a local email app. The first live submission may send a FormSubmit confirmation email to `info@keikora.fi`; click that confirmation to activate delivery. Do not put API secrets in client code.
 
 ## Structure and implementation
 
@@ -94,7 +94,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Tests run against a production export served by a small local test server. Screenshots at 375, 768, 1024 and 1440 pixels are written to ignored `test-results/`. Tests include axe checks, overflow checks, demo tabs, workflow selection, mobile menu, mocked contact-form submission and the no-demo-account disclosure. These checks do not establish full WCAG conformance or guarantee Lighthouse targets. Run Lighthouse on the deployed URL before launch; network, hosting and device conditions affect scores.
+Tests run against a production export served by a small local test server. Screenshots at 375, 768, 1024 and 1440 pixels are written to ignored `test-results/`. Tests include axe checks, overflow checks, demo tabs, workflow selection, mobile menu and mocked contact-form submission. These checks do not establish full WCAG conformance or guarantee Lighthouse targets. Run Lighthouse on the deployed URL before launch; network, hosting and device conditions affect scores.
 
 The test server applies compression and immutable asset caching to approximate production hosting. For an installed browser, set `PLAYWRIGHT_CHANNEL=msedge` or `chrome`; otherwise the tests use Playwright Chromium. Tests cover all six source-derived views on desktop/mobile and the requested 375, 768, 1024 and 1440px layouts. Run the checks again after changing source-derived representations.
 

@@ -333,7 +333,7 @@ test("mobile navigation and contact form submit without a local email app", asyn
     page.getByRole("button", { name: "Open navigation" }),
   ).toBeFocused();
   await expect(page.locator("#contact")).toContainText("Talk with Keikora.");
-  await expect(page.getByText("No demo account is promised")).toBeVisible();
+  await expect(page.getByText("Start with a practical conversation")).toBeVisible();
   const form = page.locator("form.contact-form");
   await form.getByRole("button", { name: /Send message/ }).click();
   expect(

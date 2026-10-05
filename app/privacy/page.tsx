@@ -26,7 +26,7 @@ export default function Privacy() {
       <h2>Contact form</h2>
       <p>
         {siteConfig.contactEmail
-          ? "The contact form sends the details you enter through FormSubmit to our monitored email address. We use that information only to respond about Keikora. No demo account is created by submitting the form."
+          ? "The contact form sends the details you enter through FormSubmit to our monitored email address. We use that information only to respond about Keikora."
           : "A monitored contact channel is not published yet. This website does not send or store contact requests."}
       </p>
       <h2>Cookies and analytics</h2>

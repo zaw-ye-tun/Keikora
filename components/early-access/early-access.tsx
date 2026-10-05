@@ -82,11 +82,10 @@ export function EarlyAccess() {
           <div className="early-note">
             <Mail size={19} />
             <p>
-              No demo account is promised from this page.
+              Start with a practical conversation.
               <br />
               <span>
-                Just a practical conversation about your workflow and what would
-                make Keikora useful.
+                Tell us about your workflow and what would make Keikora useful.
               </span>
             </p>
           </div>
@@ -188,7 +187,7 @@ export function EarlyAccess() {
           </button>
           <p className="form-note">
             This sends your message to {siteConfig.contactEmail} through
-            FormSubmit. No demo account is created. Read our{" "}
+            FormSubmit. Read our{" "}
             <a href="/privacy/">privacy information</a>.
           </p>
           <p className={`form-notice ${submitState}`} role="status">
